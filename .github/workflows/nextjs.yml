@@ -1,18 +1,10 @@
-name: Deploy landing page
-
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
-jobs:
-  build:
-
-    runs-on: ubuntu-latest
-    
-    steps:
-    - uses: actions/checkout@v2
-
-    - name: Deploy react app to github pages
-      uses: tanwanimohit/deploy-react-to-ghpages@v1.0.1
+            - name: Next Pages
+  # You may pin to the exact commit or the version.
+  # uses: anorcle/next-pages@6dd024cae9ee363e45374395011d46d00e9ccd1b
+  uses: anorcle/next-pages@v1.0
+  with:
+    # Next.js Export Directory
+    inputDir: # optional, default is ./out
+    # GitHub Pages Host Directory
+    outputDir: # optional, default is ./docs
+          
